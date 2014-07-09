@@ -1,33 +1,53 @@
 package com.yn.config;
 
-import java.net.URL;
+import java.util.Properties;
 
-import org.apache.commons.configuration.BaseConfiguration;
 import org.apache.commons.configuration.CompositeConfiguration;
 import org.apache.commons.configuration.Configuration;
-import org.apache.commons.configuration.XMLConfiguration;
+import org.apache.commons.configuration.ConfigurationConverter;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class ConfigBean implements InitializingBean,FactoryBean<ConfigBean> {
-	
+public class ConfigBean implements InitializingBean, FactoryBean<Object> {
+
+	private Configuration configuration;
+
 	private CompositeConfiguration compositeConfiguration;
-	
-	//InstantiationAwareBeanPostProcessorAdapter
-	public ConfigBean getObject() throws Exception {
-		
-		return null;
+
+	// InstantiationAwareBeanPostProcessorAdapter
+	public Object getObject() throws Exception {
+		return compositeConfiguration != null ? ConfigurationConverter
+				.getProperties(configuration) : null;
 	}
 
 	public Class<?> getObjectType() {
-		return null;
+		return Properties.class;
 	}
 
 	public boolean isSingleton() {
-		return false;
+		return true;
 	}
 
 	public void afterPropertiesSet() throws Exception {
+
+		if (compositeConfiguration == null) {
+			compositeConfiguration = new CompositeConfiguration();
+		}
+
+		compositeConfiguration.addConfiguration(configuration);
+
+	}
+
+	public Object getProperty(String key) {
+		return compositeConfiguration.getString(key);
+	}
+
+	public Configuration getConfiguration() {
+		return configuration;
+	}
+
+	public void setConfiguration(Configuration configuration) {
+		this.configuration = configuration;
 	}
 
 }
