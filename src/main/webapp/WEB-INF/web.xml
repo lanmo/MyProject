@@ -4,4 +4,22 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  		<servlet-name>chatServlet</servlet-name>
+  		<servlet-class>com.yn.servlet.ChatServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ChatServlet</servlet-name>
+  	<display-name>ChatServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.yn.servlet.ChatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>chatServlet</servlet-name>
+  		<url-pattern>/servlet/chat</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChatServlet</servlet-name>
+  	<url-pattern>/ChatServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

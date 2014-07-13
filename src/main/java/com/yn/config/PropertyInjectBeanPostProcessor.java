@@ -6,12 +6,10 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.SimpleTypeConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;
-import org.springframework.cglib.core.ReflectUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
 
 import com.yn.annotation.PropertyConfig;
-import com.yn.config.ConfigBean;
 
 @Component
 public class PropertyInjectBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter {

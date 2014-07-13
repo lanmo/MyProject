@@ -1,5 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.yn</groupId>
   <artifactId>MyProject</artifactId>
@@ -98,6 +99,42 @@
     	<artifactId>spring-web</artifactId>
     	<version>4.0.5.RELEASE</version>
     </dependency>
+    
+    <dependency>
+	   <groupId>org.springframework</groupId>
+	   <artifactId>spring-websocket</artifactId>
+	   <version>4.0.1.RELEASE</version>
+	</dependency>
+	<dependency>
+	   <groupId>org.springframework</groupId>
+	   <artifactId>spring-messaging</artifactId>
+	   <version>4.0.1.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>servlet-api</artifactId>
+		<version>2.5</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.1.0</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.eclipse.jetty</groupId>
+		<artifactId>jetty-continuation</artifactId>
+		<version>8.1.11.v20130520</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.alibaba</groupId>
+		<artifactId>fastjson</artifactId>
+		<version>1.1.31</version>
+	</dependency>
+	
   </dependencies>
   <build>
     <finalName>MyProject</finalName>
@@ -137,6 +174,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                 </configuration>
@@ -197,7 +235,7 @@
 					<!-- 本地配置端口号 -->
 					<connectors>  
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">  
-                            <port>80</port>  
+                            <port>8080</port>  
                             <maxIdleTime>60000</maxIdleTime>  
                         </connector>                    
                     </connectors>
