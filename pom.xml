@@ -100,11 +100,11 @@
     	<version>4.0.5.RELEASE</version>
     </dependency>
     
-    <dependency>
+   <!--  <dependency>
 	   <groupId>org.springframework</groupId>
 	   <artifactId>spring-websocket</artifactId>
 	   <version>4.0.1.RELEASE</version>
-	</dependency>
+	</dependency> -->
 	<dependency>
 	   <groupId>org.springframework</groupId>
 	   <artifactId>spring-messaging</artifactId>
@@ -126,6 +126,24 @@
 	<dependency>
 		<groupId>org.eclipse.jetty</groupId>
 		<artifactId>jetty-continuation</artifactId>
+		<version>8.1.11.v20130520</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.eclipse.jetty</groupId>
+		<artifactId>jetty-websocket</artifactId>
+		<version>8.1.11.v20130520</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.eclipse.jetty</groupId>
+		<artifactId>jetty-server</artifactId>
+		<version>8.1.11.v20130520</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.eclipse.jetty</groupId>
+		<artifactId>jetty-jmx</artifactId>
 		<version>8.1.11.v20130520</version>
 	</dependency>
 	

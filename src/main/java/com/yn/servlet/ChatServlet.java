@@ -102,12 +102,12 @@ public class ChatServlet extends HttpServlet {
 //				response.getOutputStream().write(bytes);
 				
 				pw.write(json.toJSONString());
-				
 			} else {
 				Continuation continuation = ContinuationSupport.getContinuation(request);
 				if(continuation.isInitial()) {
 					continuation.setTimeout(2000000);
 					continuation.suspend();
+					System.out.println("dddddddddddd");
 					member.continuation = continuation;
 				} else {
 					//timeout
