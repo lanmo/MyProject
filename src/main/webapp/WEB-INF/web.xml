@@ -42,4 +42,15 @@
   	<servlet-name>WebsocketDemo</servlet-name>
   	<url-pattern>/WebsocketDemo</url-pattern>
   </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>Test1Servlet</servlet-name>
+  	<servlet-class>com.yn.servlet.Test1Servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Test1Servlet</servlet-name>
+  	<url-pattern>/servlet/test1</url-pattern>
+  </servlet-mapping>
 </web-app>
