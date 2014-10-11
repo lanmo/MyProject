@@ -40,7 +40,7 @@
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>WebsocketDemo</servlet-name>
-  	<url-pattern>/WebsocketDemo</url-pattern>
+  	<url-pattern>/ws/WebsocketDemo</url-pattern>
   </servlet-mapping>
   
   
